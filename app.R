@@ -213,8 +213,14 @@ server <- function(input, output, session) {
 
     # Derive data files from wave selection and check existence
     wave <- if (identical(input$wave, "panel2")) "panel2" else "panel1"
-    file_building <- file.path("01 Raw", sprintf("ariadne_%s_buildingchars_eng_update24.dta", wave))
-    file_refurb   <- file.path("01 Raw", sprintf("ariadne_%s_experiments_eng_update24.dta",   wave))
+    # Wave 1 has "update24" suffix, Wave 2 does not
+    if (wave == "panel1") {
+      file_building <- file.path("01 Raw", sprintf("ariadne_%s_buildingchars_eng_update24.dta", wave))
+      file_refurb   <- file.path("01 Raw", sprintf("ariadne_%s_experiments_eng_update24.dta",   wave))
+    } else {
+      file_building <- file.path("01 Raw", sprintf("ariadne_%s_buildingchars_eng.dta", wave))
+      file_refurb   <- file.path("01 Raw", sprintf("ariadne_%s_experiments_eng.dta",   wave))
+    }
     append_log("Wave:", wave)
     if (!file.exists(file.path(base, file_building))) { append_log(paste("• Note: Data file not found yet:", file_building)) } else { append_log(paste("✓ Found data file:", file_building)) }
     if (!file.exists(file.path(base, file_refurb)))   { append_log(paste("• Note: Data file not found yet:", file_refurb)) }   else { append_log(paste("✓ Found data file:", file_refurb)) }
@@ -295,8 +301,14 @@ server <- function(input, output, session) {
     
     # Data files: derive from wave selection (relative paths from project root)
     wave <- if (identical(input$wave, "panel2")) "panel2" else "panel1"
-    env$file_building <- file.path("01 Raw", sprintf("ariadne_%s_buildingchars_eng_update24.dta", wave))
-    env$file_refurb   <- file.path("01 Raw", sprintf("ariadne_%s_experiments_eng_update24.dta",   wave))
+    # Wave 1 has "update24" suffix, Wave 2 does not
+    if (wave == "panel1") {
+      env$file_building <- file.path("01 Raw", sprintf("ariadne_%s_buildingchars_eng_update24.dta", wave))
+      env$file_refurb   <- file.path("01 Raw", sprintf("ariadne_%s_experiments_eng_update24.dta",   wave))
+    } else {
+      env$file_building <- file.path("01 Raw", sprintf("ariadne_%s_buildingchars_eng.dta", wave))
+      env$file_refurb   <- file.path("01 Raw", sprintf("ariadne_%s_experiments_eng.dta",   wave))
+    }
     
     # Safety: make sure the working dir starts at base
     owd <- getwd()
