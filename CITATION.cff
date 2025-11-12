@@ -1,0 +1,35 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: GHHP-Final-Energy-Demand-Calculator
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Andreas
+    family-names: Gerster
+    affiliation: Johannes Gutenberg University Mainz
+    orcid: 'https://orcid.org/0000-0001-8539-9839'
+  - given-names: Kathrin
+    family-names: Kaestner
+    affiliation: RWI - Leibniz Institute for Economic Research
+    orcid: 'https://orcid.org/0000-0001-6986-4817'
+  - given-names: Anton
+    family-names: Knoche
+    email: anton.knoche@pik-potsdam.de
+    affiliation: PIK - Potsdam Institute for Climate Impact Research
+  - given-names: Martina
+    family-names: Milcetic
+    email: mmilcetic@uni-mainz.de
+    affiliation: Johannes Gutenberg University Mainz
+  - given-names: Jan
+    family-names: Schweers
+    email: jschweer@uni-mainz.de
+    affiliation: Johannes Gutenberg University Mainz
+identifiers:
+  - type: url
+    value: >-
+      https://github.com/kathkaest/GHHP-Final-Energy-Demand-Calculator
+version: V1.1

@@ -18,19 +18,22 @@ Data access is provided by the Research Data Centre Ruhr at the RWI - Leibniz In
 Data users shall cite the datasets properly with the respective DOIs. The DOIs of the current versions of the data sets including the building characteristics from the GHHP data are: 
 
 **Scientific Use File (SUF) Wave 1 2021:** [https://doi.org/10.7807/ghhp:building:v1](https://doi.org/10.7807/ghhp:building:v1)
+
 **Scientific Use File (SUF) Wave 2 2022:** [https://doi.org/10.7807/GHHP:BUILDING:V2](https://doi.org/10.7807/GHHP:BUILDING:V2)
 
 ## More Information
 
-- Repository for V1.0: Enter Zenodo-Link here
+- Repository for V1.1: Enter Zenodo-Link here
+
+- If you use this tool, please cite it as shown under "Cite this repository"
 
 ## Contact Person
 
-Please contact [Anton Knoche](https://www.pik-potsdam.de/members/antonkn/homepage) and [Dr. Kathrin Kaestner](https://www.rwi-essen.de/en/rwi/team/person/kathrin-kaestner) in case of questions.
+Please contact [Dr. Kathrin Kaestner](https://www.rwi-essen.de/en/rwi/team/person/kathrin-kaestner) in case of questions.
 
 ## Disclaimer
 
-All rights reserved to RWI and the authors of the code, Martina Milcetic, [Anton Knoche](https://www.pik-potsdam.de/members/antonkn/homepage), [Prof. Dr. Andreas Gerster](https://environmental.economics.uni-mainz.de/team/andreas-gerster/), and [Dr. Kathrin Kaestner](https://www.rwi-essen.de/en/rwi/team/person/kathrin-kaestner). Please note that the terms of conditions of each library apply.
+All rights reserved to RWI and the authors of the code, [Prof. Dr. Andreas Gerster](https://environmental.economics.uni-mainz.de/team/andreas-gerster/), [Dr. Kathrin Kaestner](https://www.rwi-essen.de/en/rwi/team/person/kathrin-kaestner), [Anton Knoche](https://www.pik-potsdam.de/members/antonkn/homepage), [Martina Milcetic](https://environmental.economics.uni-mainz.de/team-martina-milcetic-phd-candidate/), and [Jan Schweers](https://environmental.economics.uni-mainz.de/team/team-jan-schweers-phd-candidate/). Please note that the terms of conditions of each library apply.
 
 ## Further Tool Instructions
 
