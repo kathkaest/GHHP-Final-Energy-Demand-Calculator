@@ -71,7 +71,7 @@ fileRow <- function(inputId, label, value, title="Select a file") {
 }
 
 ui <- fluidPage(
-  titlePanel("Endenergiebedarfe 🔥"),
+  titlePanel("Final Energy Demand Calculator 🔥"),
   sidebarLayout(
     sidebarPanel(
       width = 4,
