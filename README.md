@@ -66,7 +66,7 @@ On a standard 2024 desktop, total runtime for a full wave is well below 10 minut
 
 ## More Information
 
-- Repository / archive for versioned releases: **(add Zenodo or other DOI here once available)**  
+- Repository for V1: [![DOI](https://zenodo.org/badge/1063309544.svg)](https://doi.org/10.5281/zenodo.17791209)   
 - If you use this tool, **please also cite the software** (see “Cite this repository” in your code or project metadata / CITATION file).
 
 ## Contact Person
