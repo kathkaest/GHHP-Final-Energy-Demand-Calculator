@@ -67,7 +67,7 @@ On a standard 2024 desktop, total runtime for a full wave is well below 10 minut
 ## More Information
 
 - Repository for V1: [![DOI:10.5281/zenodo.17791209](https://zenodo.org/badge/1063309544.svg)](https://zenodo.org/account/settings/github/repository/kathkaest/GHHP-Final-Energy-Demand-Calculator)  
-- If you use this tool, **please also cite the software** (see “Cite this repository” in your code or project metadata / CITATION file).
+- If you use this tool, **please also cite the software** (see “Cite this repository” in in the section About or the CITATION.cff file).
 
 ## Contact Person
 
