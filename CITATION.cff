@@ -29,6 +29,8 @@ authors:
     email: jschweer@uni-mainz.de
     affiliation: Johannes Gutenberg University Mainz
 identifiers:
+  - type: doi
+    value: 10.5281/zenodo.17791209
   - type: url
     value: >-
       https://github.com/kathkaest/GHHP-Final-Energy-Demand-Calculator
