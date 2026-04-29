@@ -388,10 +388,16 @@ V_L <- f_L * A_EB
 # ----------------------------------------------------------------------------
 
 # Roof transmission heat loss
-H_TDa <- u_DaI * A_Da
+#H_TDa <- u_DaI * A_Da
 
 # Top-floor transmission heat loss
-H_TOG <- u_OGI * A_OG * Ft_OG
+#H_TOG <- u_OGI * A_OG * Ft_OG
+
+# Roof transmission heat loss (0 when roof area is 0, regardless of U-value)
+H_TDa <- ifelse(A_Da == 0, 0, u_DaI * A_Da)
+
+# Top-floor transmission heat loss (0 when top-floor area is 0, regardless of U-value)
+H_TOG <- ifelse(A_OG == 0, 0, u_OGI * A_OG * Ft_OG)
 
 # Exterior-wall transmission heat loss
 H_TAW <- u_AWI * A_AW
