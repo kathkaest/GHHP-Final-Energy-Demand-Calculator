@@ -53,8 +53,7 @@ d <- d %>%
     ist12_2a, ist12_2b, ist12_3a, ist12_5a, ist13, ist13a, ist13a_1,
     ist14, ist14a, ist14b, ist14c, ist15_1, ist15_2, ist15_3,
     ist15_4, ist16a_2, san1a_1a, san1a_13_2, san1a_23_2, san1a_33_2,
-    san1a_43_2,san1a_11,san1a_21,san1a_31,san1a_41
-  )
+    san1a_43_2,san1a_11,san1a_21,san1a_31,san1a_41)
 
 
 # ----------------------------------------------------------------------------
@@ -290,9 +289,12 @@ d <- d %>%
     )
   )
 
-# Clean dataset: drop if missing heating type or too little living space
-d <- d %>%
-  dplyr::filter(ist12 > 0L,ist4>0, ist5a > 25)
+# Clean dataset: drop all observations with missing required inputs:
+# heating type (ist12), floors (ist4), living space (ist5a, incl. fallback),
+# construction year (ist6), hot water type (ist14), heating commissioning year
+# (ist13; needed for boilers, heat pumps, gas floor heating and electric
+# storage room heating) and central heating fuel (ist12_1a; boilers >= 1995)
+d <- d %>% dplyr::filter(ist12 > 0L, ist4 > 0L, ist5a > 25, ist6 > 0L, ist14 > 0L, !(ist12 %in% c(1L, 2L, 4L) & ist13 < 0L), !(ist12 == 5L & ist12_5a == 5L & ist13 < 0L), !(ist12 == 1L & ist13 >= 6L & ist12_1a < 0L))
 
 # ----------------------------------------------------------------------------
 # 8. Save formatted data

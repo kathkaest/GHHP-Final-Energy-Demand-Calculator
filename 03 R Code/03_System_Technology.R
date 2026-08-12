@@ -37,7 +37,7 @@ d <- d %>%
   mutate(
     # ist12_5a: type of room-by-room heating (only asked for room-by-room systems)
     Hce = case_when(
-      ist12_5a == -2           ~ "Th",      # question not asked → thermostatic
+      ist12_5a == -2 | ist12_5a == - 1          ~ "Th",      # question not asked → thermostatic
       !is.na(ist12_5a)         ~ "dMan",    # any other (asked) value → manual
       TRUE                     ~ NA_character_
     )
@@ -56,6 +56,7 @@ d <- d %>%
                              # 2) Suffix from building-year questions (ist6 / ist13a_1)
                              case_when(
                                ist6  %in% 1:4                       ~ "70",         # 1970s
+                               ist6  %in% 5:6 & ist13a_1 == -1      ~ "70",         # assume 1970s
                                ist6  %in% 5:6 & ist13a_1 == -2      ~ "70",         # assume 1970s
                                ist6  %in% 5:6 & ist13a_1 %in% 1:3   ~ "70Mod",      # retrofitted 1970s
                                ist6  %in% 7:8                       ~ "90",         # 1990s
@@ -92,7 +93,7 @@ d <- d %>%
   mutate(
     # 1) Room-by-room heaters (ist12_5a)
     room_heat = case_when(
-      ist12 == 5 & (ist12_5a < 0 | is.na(ist12_5a)) ~ "",       # don’t know / not asked
+      ist12 == 5 & (ist12_5a < 0 | is.na(ist12_5a)) ~ "Ofen",   # don’t know → default: manually fired stove
       ist12 == 5 & ist12_5a == 1                    ~ "Oelofen",
       ist12 == 5 & ist12_5a %in% 2:3                ~ "Ofen",
       ist12 == 5 & ist12_5a == 4                    ~ "GRH",
@@ -133,6 +134,7 @@ d <- d %>%
       ist12 == 2 & ist12_2a != 4 ~ str_c(
         "WP",                                         # base
         case_when(                                    # heat source
+          ist12_2b == -1 ~ "L",                        # air
           ist12_2b == 1 ~ "L",                        # air
           ist12_2b == 2 ~ "E",                        # ground
           TRUE          ~ ""
@@ -243,6 +245,7 @@ d <- d %>%
         ),
         # 2b) Circulation suffix
         case_when(
+          ist14b == -1 ~ "oZ",   # without hot-water loop
           ist14b == 1 ~ "oZ",   # without hot-water loop
           ist14b == 2 ~ "mZ",   # with hot-water loop
           TRUE        ~ ""
