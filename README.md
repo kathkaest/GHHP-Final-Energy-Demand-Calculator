@@ -76,7 +76,7 @@ If you use this tool, please cite both **the software** (see “Cite this reposi
 
 For questions about the tool or its use with GHHP data, please contact:  
 
-**[Anton Knoche](https://www.pik-potsdam.de/members/antonkn/homepage)**
+**[Anton Knoche](https://www.pik-potsdam.de/members/antonkn/homepage)** (Email: anton.knoche@pik-potsdam.de)
 
 ## Disclaimer
 
