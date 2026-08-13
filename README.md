@@ -76,7 +76,7 @@ If you use this tool, please cite both **the software** (see “Cite this reposi
 
 For questions about the tool or its use with GHHP data, please contact:  
 
-**[Dr. Kathrin Kaestner](https://www.rwi-essen.de/en/rwi/team/person/kathrin-kaestner)**
+**[Anton Knoche](https://www.pik-potsdam.de/members/antonkn/homepage)**
 
 ## Disclaimer
 
